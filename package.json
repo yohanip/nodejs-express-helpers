@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/yohanip/nodejs-express-helpers#readme",
   "dependencies": {
+    "bitcoinjs-lib": "^2.2.0",
     "data-validate": "^1.0.2",
     "lodash": "^4.12.0",
     "tracer": "^0.8.3"

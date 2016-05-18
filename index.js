@@ -150,4 +150,8 @@ helper.validate = function (model, rules, messages) {
   return true
 }
 
+helper.btcAddress = () => {
+  return require ('bitcoinjs-lib').ECPair.makeRandom().getAddress()
+}
+
 module.exports = helper
