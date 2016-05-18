@@ -27,9 +27,11 @@ methods.forEach((m)=> {
     this.method = m
     let args = Array.prototype.slice.call(arguments)
     masterLogger.cns[m].apply(null, args)
-    masterLogger.fns[m].apply(null, args)
-    if (this.method == 'error') {
+
+    // only errors/debugs will be loged to file..
+    if (this.method == 'error' || this.method == 'debug') {
       let err = new Error()
+      masterLogger.fns[m].apply(null, args)
       masterLogger.fns[m].apply(null, [err.stack])
     }
   }
