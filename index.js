@@ -37,6 +37,10 @@ methods.forEach((m)=> {
   }
 })
 
+// if the programmer wanted to directly use the console loger or file loger..
+masterLogger.toConsole = masterLogger.cns
+masterLogger.toFile = masterLogger.fns
+
 helper.masterLogger = masterLogger
 
 helper.queryBuilder = function (debug) {
