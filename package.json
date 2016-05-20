@@ -1,6 +1,6 @@
 {
   "name": "nodejs-express-helper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "query builder, error response, logger, validating laravel style..",
   "main": "index.js",
   "scripts": {
