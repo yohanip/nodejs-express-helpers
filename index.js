@@ -9,7 +9,11 @@ helper.errorResponse = (res, e) => {
   } else {
     if (e.errors && Array.isArray(e.errors) && e.errors[0].message) {
       return res.status(422).send({error: e.errors[0].message})
-    } else {
+    }
+    else if(e.error) {
+      return res.status(422).send(e)
+    }
+    else {
       global.logger.error(e)
       return res.status(422).send({error: 'Server error.'})
     }
